@@ -64,3 +64,61 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 -User-Friedly: Any user can use it easily and can control automatically all devices with the help of remote as it interface with the app and wifi module.
 
 # List of Components Required for CEHA System
+
+
+| Item    | Quantity |
+|---------|-----|
+|AC Mains Power Supply     | 1  | 
+|  4-Channel Relay   | 1  | 
+|VSDSquadron mini| 1|
+| ESP32 MODULE | 1  |  |
+| Touch Sensor | 1 | Display |
+| Connecting wires | 1Set |
+|2 CH relay5V -240V|1|
+| Touch Sensor | 1|
+|5v-voltage regulator adaptor| 1|
+| Zero PCB | 1|
+|Switch | 1 |
+| LED bulb | 2|
+| Small Fan | 1|
+| DHT11 Sensor | 1|
+| Case box | 1|
+
+# PIN OUT TABLE  
+
+|Component     	|    Pin/Connection	 |     Connected To|
+|----------------|--------------------|-----------------|
+|Energy Meter  	|Pulse Output	   |   Optocoupler (Input)|
+|Optocoupler(4N35)|	Input	Energy Meter |Pulse Output|
+|                 |Output	|VSDSquadron mini GPIO Input Pin (PD2)|
+|                |                  |                   |	
+|VSDSquadron mini|	GPIO Pin (PD2) 	|LM393 input|
+|                |GPIO Pin TX (PD5)|	GPIO Pin RX (16)|
+|                | GPIO Pin RX (PD6)|	GPIO Pin TX (17)|
+|                |                   |                  |
+|ESP32		       |                   |                  |
+|                | RX (16)        	|VSDSquadron mini TX (PD5)|
+|	        |TX (17)	|VSDSquadron mini RX (PD6)|
+|               |              |                          |
+|Relay module	|Signal pin	|VSDSquardron mini GPIO Pin PC3|
+|               |Vcc	|3.3V/5V (depending on relay)   |
+|               |	GND    |	GND            |
+|	        |COM	|Power Line (Common)           |
+|               |	NO (Normally Open)|	Load(Device Being Controlled)|
+|               |	NC (Normally Closed)|	Optional (for fail-safe connections)|
+|                |                          |                                       |	
+|5 volt adaptaor | 	Phase	|Phase of the energy meter                 |
+|                 |	Netural |	Netural of the energy meter         |
+|             |	5V	  |VSDSquadron mini|  VCC                                    |
+|              |	GND	|VSDSquadron mini | GND                    |                 
+|LM393 Comparator |D0      |  VSDSquadron mini   GPIO PD6                |
+|                 |5V       |VSDSquadron mini 5V|
+|                 |         |VSDSquadron mini GND|
+|I2C LCD |	SDA|	vsdsquadron mini GPIO (PC1)|
+|            |SCA|	vsdsquadron mini GPIO (PC2)|
+
+
+# BLOCK DIAGRAM OF THE CEHA SYSTEM 
+
+![block diagram CEHA ](https://github.com/user-attachments/assets/f5a8357d-9aba-4cc0-890a-ebbfae2a339f)
+
