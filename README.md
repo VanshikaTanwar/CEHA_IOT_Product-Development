@@ -126,4 +126,21 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 
 ![circuit diagram of CEHA](https://github.com/user-attachments/assets/339c1629-1405-4375-97f7-8114d61c4cf0)
 
+# Introduction to Arduino IOT cloud
+
+The Arduino IoT Cloud is an integrated platform designed to facilitate the development and deployment of IoT projects. It enables seamless connectivity and device management providing users with remote control and project monitoring. The projects backbone is the Arduino IoT Cloud which connects the smart energy meter to the internet and enables remote control and real-time data visualization. Because of the Arduino IoT Clouds intuitive interface we can design and manage IoT devices with it. The platform supports many Arduino boards including the popular ESP32 and MKR series which are perfect for Internet of Things applications. The Arduino IoT Cloud allows us to define attributes like cost energy consumption and relay states. These properties have been updated.
+
+# SOURCE CODE OF VSDSQUARDRON MINI AN ESP32 
+--------
+-----------
+# IMAGES OF THE PROJECT
+----------
+-------------
+# DEMONSTRATION VIDEO OF THE PRODUCT Demonstration  
+--------
+--------
+
+===============================
+# ABOUT 
+===============
 
