@@ -131,8 +131,119 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 The Arduino IoT Cloud is an integrated platform designed to facilitate the development and deployment of IoT projects. It enables seamless connectivity and device management providing users with remote control and project monitoring. The projects backbone is the Arduino IoT Cloud which connects the smart energy meter to the internet and enables remote control and real-time data visualization. Because of the Arduino IoT Clouds intuitive interface we can design and manage IoT devices with it. The platform supports many Arduino boards including the popular ESP32 and MKR series which are perfect for Internet of Things applications. The Arduino IoT Cloud allows us to define attributes like cost energy consumption and relay states. These properties have been updated.
 
 # SOURCE CODE OF VSDSQUARDRON MINI AN ESP32 
---------
------------
+
+``` 
+#define TOUCH_SENSOR_1  PD2
+#define TOUCH_SENSOR_2  PD3
+#define OUTPUT_1        PD4
+#define OUTPUT_2        PC3
+
+#define ESP_CTRL_1      PC5  // ESP32 control pin for Light 1
+#define ESP_CTRL_2      PC6  // ESP32 control pin for Light 2
+
+bool light1 = false;
+bool light2 = false;
+
+bool lastTouch1State = LOW;
+bool lastTouch2State = LOW;
+bool lastESP1State = LOW;
+bool lastESP2State = LOW;
+
+void setup() {
+    pinMode(TOUCH_SENSOR_1, INPUT);
+    pinMode(TOUCH_SENSOR_2, INPUT);
+    pinMode(OUTPUT_1, OUTPUT);
+    pinMode(OUTPUT_2, OUTPUT);
+
+    pinMode(ESP_CTRL_1, INPUT);
+    pinMode(ESP_CTRL_2, INPUT);
+}
+
+void loop() {
+    // Read touch sensor 1 state
+    bool currentTouch1State = digitalRead(TOUCH_SENSOR_1);
+    if (currentTouch1State == HIGH && lastTouch1State == LOW) {
+        light1 = !light1;  // Toggle light
+        digitalWrite(OUTPUT_1, light1);
+        delay(300);  // Debounce delay
+    }
+    lastTouch1State = currentTouch1State;
+
+    // Read touch sensor 2 state
+    bool currentTouch2State = digitalRead(TOUCH_SENSOR_2);
+    if (currentTouch2State == HIGH && lastTouch2State == LOW) {
+        light2 = !light2;  // Toggle light
+        digitalWrite(OUTPUT_2, light2);
+        delay(300);  // Debounce delay
+    }
+    lastTouch2State = currentTouch2State;
+
+    // Read ESP32 control 1 state
+    bool currentESP1State = digitalRead(ESP_CTRL_1);
+    if (currentESP1State == HIGH && lastESP1State == LOW) {
+        light1 = !light1;  // Toggle light
+        digitalWrite(OUTPUT_1, light1);
+        delay(300);
+    }
+    lastESP1State = currentESP1State;
+
+    // Read ESP32 control 2 state
+    bool currentESP2State = digitalRead(ESP_CTRL_2);
+    if (currentESP2State == HIGH && lastESP2State == LOW) {
+        light2 = !light2;  // Toggle light
+        digitalWrite(OUTPUT_2, light2);
+        delay(300);
+    }
+    lastESP2State = currentESP2State;
+}
+
+
+/ done
+#include "thingProperties.h"
+
+#define LIGHT_1_CTRL 18  // GPIO for Light 1 control
+#define LIGHT_2_CTRL 19  // GPIO for Light 2 control
+
+void setup() {
+    Serial.begin(115200);
+    initProperties();
+    ArduinoCloud.begin(ArduinoIoTPreferredConnection);
+    
+    pinMode(LIGHT_1_CTRL, OUTPUT);
+    pinMode(LIGHT_2_CTRL, OUTPUT);
+}
+
+void loop() {
+    ArduinoCloud.update();
+
+    // Control VSDSquadron Mini via GPIOs
+    digitalWrite(LIGHT_1_CTRL, light1_state);
+    digitalWrite(LIGHT_2_CTRL, light2_state);
+}
+
+/*
+  Since Light1State is READ_WRITE variable, onLight1StateChange() is
+  executed every time a new value is received from IoT Cloud.
+*/
+void onLight1StateChange()  {
+  // Add your code here to act upon Light1State change
+}
+/*
+  Since Light2 is READ_WRITE variable, onLight2Change() is
+  executed every time a new value is received from IoT Cloud.
+*/
+void onLight2Change()  {
+  // Add your code here to act upon Light2 change
+}
+/*
+  Since Light2State is READ_WRITE variable, onLight2StateChange() is
+  executed every time a new value is received from IoT Cloud.
+*/
+void onLight2StateChange()  {
+  // Add your code here to act upon Light2State change
+}
+```
+
 # IMAGES OF THE PROJECT
 ----------
 -------------
