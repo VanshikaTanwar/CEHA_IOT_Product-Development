@@ -120,7 +120,10 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 
 # BLOCK DIAGRAM OF THE CEHA SYSTEM 
 
-![block diagram CEHA ](https://github.com/user-attachments/assets/f5a8357d-9aba-4cc0-890a-ebbfae2a339f)
+
+![block diagram CEHA ](https://github.com/user-attachments/assets/d3bf4e26-3a8b-4f0a-b3d7-328fcb476dd8)
+
+
 
 # CIRCUIT DIAGRAM OF CEHA SYSTEM
 
