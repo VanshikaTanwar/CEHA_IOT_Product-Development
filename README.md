@@ -219,6 +219,9 @@ void loop() {
 
 ////////////////////////////////////////////////////////
 
+```
+# Code for ESP32 Module 
+``` 
 Esp32 code 
 
 #include "thingProperties.h"
@@ -284,15 +287,16 @@ Functionality of the CEHA :-
      •	The two LEDs can be triggered wirelessly through Arduino Cloud Dashboard, allowing users to operate the system from anywhere using Wi-Fi.
 This project combines cost efficiency, smart automation, and remote access, making it a practical solution for modern home automation.
 
-# IMAGE OF THE PROJECT
+# IMAGE OF THE Final Product
 
 ![ceha image ](https://github.com/user-attachments/assets/4518afcf-7f91-4ff0-ad3a-3323263ebead)
 
-# DEMONSTRATION VIDEO OF THE PRODUCT Demonstration  
+# Demonstration Video of the Product working  
 
 
 https://github.com/user-attachments/assets/4a794490-5865-4092-aeec-8f5c500ca96d
 
+# Demonstration Video of Final Product
 
 [![Video Thumbnail](link_to_your_thumbnail_image.jpg)](https://drive.google.com/file/d/1mKWnLduUi8WlkTlkoxxfBus3ZQWCTpxj/view?usp=sharing)
 
