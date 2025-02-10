@@ -26,22 +26,22 @@ This project has a number of important features and advantages:-
 
 # Working of (CEHA) System
 
-1. Power Supply: The ESP32 module, DHT11, PIR, Touch sensors, relay module, and VSDSquadron Mini board all receive the required power from the 5V power supply. Appliances connected to the relay can have their AC mains power controlled by the AC Mains to Supply Power with Relay circuit. 
+1. Power Supply: The ESP32 module, PIR, Touch sensors, relay module, and VSDSquadron Mini board all receive the required power from the 5V power supply. Appliances connected to the relay can have their AC mains power controlled by the AC Mains to Supply Power with Relay circuit. 
 
-2. Acquisition of Sensor Data: -Temperature and humidity are measured by the DHT11 sensor. This information can be used to control appliances based on temperature (e.g., adjusting fan speed based on temperature). 
+2. Acquisition of Sensor Data: 
 -Motion is detected by aaPIR sensor. Actions such as turning lights on when motion is detected and off after a predetermined amount of inactivity can be triggered by this. 
 -Touch Sensor: Enables manual device control or the activation of particular actions through touch input.
 
-3. Data Processing and Management: Data from the sensors (DHT11, PIR, Touch) is read by the VSDSquadron Mini. makes decisions by processing the sensor data (e.g., adjusting fan speed based on temperature, turning lights on/off based on PIR sensor input). It Transmits and receives commands by communicating with the ESP32 module. Data is received by the ESP32 Module from the VSDSquadron Mini. uses Wi-Fi to connect to the internet. sends information to the cloud (like the Arduino IoT Cloud) for remote access and storage. gets commands for control from the mobile app or the cloud. sends commands to the VSDSquadron Mini for control.
+3. Data Processing and Management: Data from the sensors ( PIR, Touch) is read by the VSDSquadron Mini. makes decisions by processing the sensor data (e.g.,  turning lights on/off based on PIR sensor input). It Transmits and receives commands by communicating with the ESP32 module. Data is received by the ESP32 Module from the VSDSquadron Mini. uses Wi-Fi to connect to the internet. sends information to the cloud (like the Arduino IoT Cloud) for remote access and storage. gets commands for control from the mobile app or the cloud. sends commands to the VSDSquadron Mini for control.
 
 4. Appliance Control: The VSDSquadron Mini sends control signals to the relay module. Depending on the signals it receives, switches turn on and off the power to the connected appliances (lights, fans, etc.).
 
-5. Control and User Interface: The Arduino IoT Remote mobile app allows users to communicate with the system. Track sensor data in real time (temperature, humidity). Remotely control appliances (fan speed, light on/off, etc.). Plan automated tasks, such as turning on lights at dusk.
+5. Control and User Interface: The Arduino IoT Remote mobile app allows users to communicate with the system. Track sensor data in real time . Remotely control appliances (fan speed, light on/off, etc.). Plan automated tasks, such as turning on lights at dusk.
 
 6. Cloud-Based Communication: Users can access and monitor system data remotely thanks to the ESP32 module's data transmission to the cloud. Additionally, the cloud can offer insights into patterns of energy consumption and store historical data for analysis.
 
 
-Hence, Overall this "Cost-Effective IoT-Based Home Automation System" functions as: The brain of the system, the VSDSquadron Mini board, gathers information from sensors such as motion, temperature, and humidity. After processing this data, it makes choices like turning on lights when it detects motion or modifying fan speed in response to temperature. Through data transmission to the cloud for remote monitoring and command reception from the user interface (web/mobile app), the ESP32 module enables communication. The VSDSquadron Mini receives these commands and uses them to control the relay module that turns appliances on and off. Through the web interface or mobile app, users communicate with the system, scheduling automated actions, managing devices, and monitoring data. This integrated system offers a practical and economical way to control household appliances.
+Hence, Overall this "Cost-Effective IoT-Based Home Automation System" functions as: The brain of the system, the VSDSquadron Mini board, gathers information from sensors such as motion, . After processing this data, it makes choices like turning on lights when it detects motion . Through data transmission to the cloud for remote monitoring and command reception from the user interface (web/mobile app), the ESP32 module enables communication. The VSDSquadron Mini receives these commands and uses them to control the relay module that turns appliances on and off. Through the web interface or mobile app, users communicate with the system, scheduling automated actions, managing devices, and monitoring data. This integrated system offers a practical and economical way to control household appliances.
 
 # Features and Benefits of ( CEHA )
 
@@ -55,7 +55,9 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 
 - Reducing energy consumption and saving wastage of energy monitoring: This solution is helpful for Person with Disbailities , as they can use remote for controlling the home appliances. 
 
--Cost-Effectiveness: The implementation of a cost-efficient, open-source hardware architecture (VSD mini RISC-V) enhances the economic feasibility of the system.  -Flexibility: The open-source framework of RISC-V permits extensive customization and fosters the creation of a diverse array of features and integrations.  
+-Cost-Effectiveness: The implementation of a cost-efficient, open-source hardware architecture (VSD mini RISC-V) enhances the economic feasibility of the system.  
+
+-Flexibility: The open-source framework of RISC-V permits extensive customization and fosters the creation of a diverse array of features and integrations.  
 
 -Innovation: This initiative contributes to the expansion of the RISC-V ecosystem and promotes the advancement of novel and inventive home automation solutions. 
 
@@ -72,8 +74,7 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 |  4-Channel Relay   | 1  | 
 |VSDSquadron mini| 1|
 | ESP32 MODULE | 1  |  |
-| Touch Sensor | 1 | Display |
-| Connecting wires | 1Set |
+| Connecting wires | some Set |
 | Touch Sensor | 1|
 |5v-voltage regulator adaptor| 1|
 | Zero PCB | 1|
@@ -303,7 +304,7 @@ https://github.com/user-attachments/assets/4a794490-5865-4092-aeec-8f5c500ca96d
 
 
 
-# CONCLUSION
+# Conclusion
 
 This project effectively illustrated the viability of using the VSDSquadron Mini RISC-V board to create an affordable and useful Internet of Things-based home automation system. Remote control, automated scheduling, energy monitoring, and basic security features were all made possible by the system's integration of several sensors and actuators. The cost effectiveness of the solution was enhanced by the utilisation of open-source software and the open-source RISC-V board. This project demonstrates how the RISC-V architecture may be used to develop creative and approachable smart home solutions. 
 
