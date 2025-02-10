@@ -294,11 +294,12 @@ This project combines cost efficiency, smart automation, and remote access, maki
 https://github.com/user-attachments/assets/4a794490-5865-4092-aeec-8f5c500ca96d
 
 
+[![Video Thumbnail](link_to_your_thumbnail_image.jpg)](https://drive.google.com/file/d/1mKWnLduUi8WlkTlkoxxfBus3ZQWCTpxj/view?usp=sharing)
 
 
-===============================
+
 # CONCLUSION
-===============
+
 This project effectively illustrated the viability of using the VSDSquadron Mini RISC-V board to create an affordable and useful Internet of Things-based home automation system. Remote control, automated scheduling, energy monitoring, and basic security features were all made possible by the system's integration of several sensors and actuators. The cost effectiveness of the solution was enhanced by the utilisation of open-source software and the open-source RISC-V board. This project demonstrates how the RISC-V architecture may be used to develop creative and approachable smart home solutions. 
 
 The main accomplishments are highlighted in this conclusion: 
