@@ -84,33 +84,32 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 
 # PIN OUT TABLE  
 
-|Component     	|    Pin/Connection	 |     Connected To|
-|----------------|--------------------|-----------------|
 
-|                |                  |                   |	
-|VSDSquadron mini|	GPIO Pin (PD2) 	|LM393 input|
-|                |GPIO Pin TX (PD5)|	GPIO Pin RX (16)|
-|                | GPIO Pin RX (PD6)|	GPIO Pin TX (17)|
-|                |                   |                  |
-|ESP32		       |                   |                  |
-|                | RX (16)        	|VSDSquadron mini TX (PD5)|
-|	        |TX (17)	|VSDSquadron mini RX (PD6)|
-|               |              |                          |
-|Relay module	|Signal pin	|VSDSquardron mini GPIO Pin PC3|
-|               |Vcc	|3.3V/5V (depending on relay)   |
-|               |	GND    |	GND            |
-|	        |COM	|Power Line (Common)           |
-|               |	NO (Normally Open)|	Load(Device Being Controlled)|
-|               |	NC (Normally Closed)|	Optional (for fail-safe connections)|
-|                |                          |                                       |	
-|5 volt adaptor | 	for powering	|It is giving power to the whole system                 |
-|             |	5V	  |VSDSquadron mini|  VCC                                    |
-|              |	GND	|VSDSquadron mini | GND                    |                 
-|LM393 Comparator |D0      |  VSDSquadron mini   GPIO PD6                |
-|                 |5V       |VSDSquadron mini 5V|
-|                 |         |VSDSquadron mini GND|
-|I2C LCD |	SDA|	vsdsquadron mini GPIO (PC1)|
-|            |SCA|	vsdsquadron mini GPIO (PC2)|
+| **Component**          | **Pin/Connection**   | **End Point Connected To**                           |
+|-----------------------|--------------------|------------------------------------------|
+|                        | Output             | VSDSquadron Mini GPIO Input (PD2)        |
+| **VSDSquadron Mini**   | GPIO Pin (PD2)     | LM393 Input                              |
+|                        | GPIO Pin (PD3)     | ESP32 (D15)                              |
+| **Internal Reset**    |  ESP32 (D14)         | VSDSquadron Mini (PD4)                 |
+| **Relay Module**       | Signal Pin         | ESP32 (D13)                             |
+|                        | VCC                | 3.3V/5V (depending on relay)             |
+|                        | GND                | GND                                      |
+|                        | COM                | Power Line (Common)                      |
+|                        | NO (Normally Open) | Load (Device Being Controlled)           |
+|                        | NC (Normally Closed) | Optional (for fail-safe connections)     |
+| **5V Adapter**        | Power             | Power to whole CEHA SYstem                  |
+|                        | Neutral            | Neutral of the Energy Meter              |
+|                        | 5V                 | VSDSquadron Mini & ESP32 VCC              |
+|                        | GND                | VSDSquadron Mini & ESP32 GND              |
+| **LM393 Comparator**  | D0                 | VSDSquadron Mini GPIO PD2                |
+|                        | VCC                 | VSDSquadron Mini 3V                      |
+|                        | GND                | VSDSquadron Mini GND                     |
+| **I2C LCD**          | SDA                 | VSDSquadron Mini GPIO (PC1)              |
+|                        | SCL                | VSDSquadron Mini GPIO (PC2)              |
+|                        | VCC                 | VSDSquadron Mini 5V                      |
+|                        | GND                | VSDSquadron Mini GND                     |
+
+
 
 
 # BLOCK DIAGRAM OF THE CEHA SYSTEM 
