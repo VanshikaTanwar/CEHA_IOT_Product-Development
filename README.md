@@ -101,7 +101,7 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 |                        | Neutral            | Neutral of the Energy Meter              |
 |                        | 5V                 | VSDSquadron Mini & ESP32 VCC              |
 |                        | GND                | VSDSquadron Mini & ESP32 GND              |
-| **LM393 Comparator**  | D0                 | VSDSquadron Mini GPIO PD2                |
+| **Touch Sensor**       | GPIO                 | VSDSquadron Mini GPIO PD2                |
 |                        | VCC                 | VSDSquadron Mini 3V                      |
 |                        | GND                | VSDSquadron Mini GND                     |
 | **I2C LCD**          | SDA                 | VSDSquadron Mini GPIO (PC1)              |
@@ -131,6 +131,8 @@ The Arduino IoT Cloud is an integrated platform designed to facilitate the devel
 
 # SOURCE CODE OF VSDSQUARDRON MINI AND ESP32 
 
+
+### Code for VSDSQuadron Mini
 ``` 
 VSDSquadron Mini code 
 
@@ -219,7 +221,7 @@ void loop() {
 ////////////////////////////////////////////////////////
 
 ```
-# Code for ESP32 Module 
+### Code for ESP32 Module 
 ``` 
 Esp32 code 
 
