@@ -130,9 +130,14 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 
 The Arduino IoT Cloud is an integrated platform designed to facilitate the development and deployment of IoT projects. It enables seamless connectivity and device management providing users with remote control and project monitoring. The projects backbone is the Arduino IoT Cloud which connects the smart energy meter to the internet and enables remote control and real-time data visualization. Because of the Arduino IoT Clouds intuitive interface we can design and manage IoT devices with it. The platform supports many Arduino boards including the popular ESP32 and MKR series which are perfect for Internet of Things applications. The Arduino IoT Cloud allows us to define attributes like cost energy consumption and relay states. These properties have been updated.
 
-# SOURCE CODE OF VSDSQUARDRON MINI AN ESP32 
+
+
+# SOURCE CODE OF VSDSQUARDRON MINI AND ESP32 
 
 ``` 
+VSDSquadron Mini code 
+
+
 #define TOUCH_SENSOR_1  PD2
 #define TOUCH_SENSOR_2  PD3
 #define OUTPUT_1        PD4
@@ -141,9 +146,12 @@ The Arduino IoT Cloud is an integrated platform designed to facilitate the devel
 #define ESP_CTRL_1      PC5  // ESP32 control pin for Light 1
 #define ESP_CTRL_2      PC6  // ESP32 control pin for Light 2
 
+#define PIR_SENSOR      PD5  // PIR sensor input
+#define OUTPUT_3        PC4  // New LED output controlled by PIR sensor
+
+//int pirState = 0;
 bool light1 = false;
 bool light2 = false;
-
 bool lastTouch1State = LOW;
 bool lastTouch2State = LOW;
 bool lastESP1State = LOW;
@@ -152,8 +160,11 @@ bool lastESP2State = LOW;
 void setup() {
     pinMode(TOUCH_SENSOR_1, INPUT);
     pinMode(TOUCH_SENSOR_2, INPUT);
+    pinMode(PIR_SENSOR, INPUT);
+
     pinMode(OUTPUT_1, OUTPUT);
     pinMode(OUTPUT_2, OUTPUT);
+    pinMode(OUTPUT_3, OUTPUT);
 
     pinMode(ESP_CTRL_1, INPUT);
     pinMode(ESP_CTRL_2, INPUT);
@@ -195,10 +206,23 @@ void loop() {
         delay(300);
     }
     lastESP2State = currentESP2State;
+
+    // Read PIR sensor state
+    int pirState = digitalRead(PIR_SENSOR);
+    if (pirState == HIGH) {
+        digitalWrite(OUTPUT_3, HIGH);  // Turn on new LED
+    } 
+    else {
+        digitalWrite(OUTPUT_3, LOW);   // Turn off new LED
+    }
 }
 
 
-/ done
+
+////////////////////////////////////////////////////////
+
+Esp32 code 
+
 #include "thingProperties.h"
 
 #define LIGHT_1_CTRL 18  // GPIO for Light 1 control
@@ -242,11 +266,30 @@ void onLight2Change()  {
 void onLight2StateChange()  {
   // Add your code here to act upon Light2State change
 }
+
+
+
 ```
 
-# IMAGES OF THE PROJECT
-----------
--------------
+# Functionality 
+
+Functionality of the CEHA :-
+
+1.	Touch-Based Control:
+     •	The system includes two touch sensors interfaced with the VSDSquadron Mini, which act as input triggers.
+     •	When a touch sensor is activated, the corresponding LED lights up.
+2.	Motion Detection:
+     •	A PIR sensor is integrated to detect motion.
+     •	When motion is detected, another LED automatically turns on, enhancing security and convenience.
+3.	Wi-Fi-Based Remote Control:
+     •	An ESP32 acts as a secondary board, enabling remote control.
+     •	The two LEDs can be triggered wirelessly through Arduino Cloud Dashboard, allowing users to operate the system from anywhere using Wi-Fi.
+This project combines cost efficiency, smart automation, and remote access, making it a practical solution for modern home automation.
+
+# IMAGE OF THE PROJECT
+
+![ceha image ](https://github.com/user-attachments/assets/4518afcf-7f91-4ff0-ad3a-3323263ebead)
+
 # DEMONSTRATION VIDEO OF THE PRODUCT Demonstration  
 
 
@@ -256,8 +299,25 @@ https://github.com/user-attachments/assets/4a794490-5865-4092-aeec-8f5c500ca96d
 
 
 ===============================
-# ABOUT 
+# CONCLUSION
 ===============
+This project effectively illustrated the viability of using the VSDSquadron Mini RISC-V board to create an affordable and useful Internet of Things-based home automation system. Remote control, automated scheduling, energy monitoring, and basic security features were all made possible by the system's integration of several sensors and actuators. The cost effectiveness of the solution was enhanced by the utilisation of open-source software and the open-source RISC-V board. This project demonstrates how the RISC-V architecture may be used to develop creative and approachable smart home solutions. 
 
+The main accomplishments are highlighted in this conclusion: 
+- Functional System: A home automation system that functions and has the functionality that 
+users want. 
+- Cost-Effectiveness: Attained by utilising the inexpensive RISC-V board. 
+- RISC-V Potential: Exhibited the RISC-V architecture's potential for Internet of Things 
+applications.
+
+# Acknowledgements
+
+* [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
+
+
+## Author
+
+
+- [Vanshika Tanwar](https://github.com/VanshikaTanwar), Bachelor of Technology in Electronics & Communication Engineering,Dronacharya Group of Institutions,Greater Noida, U.P.
 
 
