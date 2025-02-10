@@ -74,23 +74,19 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 | ESP32 MODULE | 1  |  |
 | Touch Sensor | 1 | Display |
 | Connecting wires | 1Set |
-|2 CH relay5V -240V|1|
 | Touch Sensor | 1|
 |5v-voltage regulator adaptor| 1|
 | Zero PCB | 1|
 |Switch | 1 |
 | LED bulb | 2|
 | Small Fan | 1|
-| DHT11 Sensor | 1|
 | Case box | 1|
 
 # PIN OUT TABLE  
 
 |Component     	|    Pin/Connection	 |     Connected To|
 |----------------|--------------------|-----------------|
-|Energy Meter  	|Pulse Output	   |   Optocoupler (Input)|
-|Optocoupler(4N35)|	Input	Energy Meter |Pulse Output|
-|                 |Output	|VSDSquadron mini GPIO Input Pin (PD2)|
+
 |                |                  |                   |	
 |VSDSquadron mini|	GPIO Pin (PD2) 	|LM393 input|
 |                |GPIO Pin TX (PD5)|	GPIO Pin RX (16)|
@@ -107,8 +103,7 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 |               |	NO (Normally Open)|	Load(Device Being Controlled)|
 |               |	NC (Normally Closed)|	Optional (for fail-safe connections)|
 |                |                          |                                       |	
-|5 volt adaptaor | 	Phase	|Phase of the energy meter                 |
-|                 |	Netural |	Netural of the energy meter         |
+|5 volt adaptor | 	for powering	|It is giving power to the whole system                 |
 |             |	5V	  |VSDSquadron mini|  VCC                                    |
 |              |	GND	|VSDSquadron mini | GND                    |                 
 |LM393 Comparator |D0      |  VSDSquadron mini   GPIO PD6                |
