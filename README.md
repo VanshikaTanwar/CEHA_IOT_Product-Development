@@ -85,8 +85,8 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 
 | **Component**          | **Pin/Connection**   | **End Point Connected To**                           |
 |-----------------------|--------------------|------------------------------------------|
-| **esp32**              | tx                 |PD5  vsdsquadronmini                     |
-|                        | rx                 |PD6  vsdsquadronmini                     |
+| **ESP32**              | 19                 |PC5  vsdsquadronmini                     |
+|                        | 18                 |PC6  vsdsquadronmini                     |
 | **5V Adapter**        | Power             | Power to whole CEHA SYstem                  |
 |                        | 5V                 | VSDSquadron Mini & ESP32 VCC              |
 |                        | GND                | VSDSquadron Mini & ESP32 GND              |
