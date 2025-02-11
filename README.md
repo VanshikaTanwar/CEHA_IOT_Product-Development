@@ -96,7 +96,7 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 | **Touch Sensor 2**     | GPIO                 | VSDSquadron Mini GPIO PD3               |
 |                        | VCC                 | VSDSquadron Mini 3V                      |
 |                        | GND                | VSDSquadron Mini GND                     |
-| **PIR Sensor**         | d0                 | VSDSquadron Mini GPIO (PD5)              |                  
+| **PIR Sensor**         | D0                 | VSDSquadron Mini GPIO (PD5)              |                  
 |                        | VCC                 | VSDSquadron Mini 5V                      |
 |                        | GND                | VSDSquadron Mini GND                     |
 |  **LED1**              |SIGNAL              |VSDSquadron Mini PD4                      |
