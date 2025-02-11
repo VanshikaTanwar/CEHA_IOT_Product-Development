@@ -75,10 +75,9 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 |VSDSquadron mini| 1|
 | ESP32 MODULE | 1  |  |
 | Connecting wires | some Set |
-| Touch Sensor | 1|
+| Touch Sensor | 2|
 |5v-voltage regulator adaptor| 1|
 | Zero PCB | 1|
-|Switch | 1 |
 | LED bulb | 2|
 | Small Fan | 1|
 | Case box | 1|
