@@ -71,15 +71,13 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 | Item    | Quantity |
 |---------|-----|
 |AC Mains Power Supply     | 1  | 
-|  4-Channel Relay   | 1  | 
 |VSDSquadron mini| 1|
 | ESP32 MODULE | 1  |  |
 | Connecting wires | some Set |
 | Touch Sensor | 2|
 |5v-voltage regulator adaptor| 1|
 | Zero PCB | 1|
-| LED bulb | 2|
-| Small Fan | 1|
+| LED bulb | 3|
 | Case box | 1|
 
 # PIN OUT TABLE  
@@ -87,28 +85,26 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 
 | **Component**          | **Pin/Connection**   | **End Point Connected To**                           |
 |-----------------------|--------------------|------------------------------------------|
-|                        | Output             | VSDSquadron Mini GPIO Input (PD2)        |
-| **VSDSquadron Mini**   | GPIO Pin (PD2)     | LM393 Input                              |
-|                        | GPIO Pin (PD3)     | ESP32 (D15)                              |
-| **Internal Reset**    |  ESP32 (D14)         | VSDSquadron Mini (PD4)                 |
-| **Relay Module**       | Signal Pin         | ESP32 (D13)                             |
-|                        | VCC                | 3.3V/5V (depending on relay)             |
-|                        | GND                | GND                                      |
-|                        | COM                | Power Line (Common)                      |
-|                        | NO (Normally Open) | Load (Device Being Controlled)           |
-|                        | NC (Normally Closed) | Optional (for fail-safe connections)     |
+| **esp32**              | tx                 |PD5  vsdsquadronmini                     |
+|                        | rx                 |PD6  vsdsquadronmini                     |
 | **5V Adapter**        | Power             | Power to whole CEHA SYstem                  |
-|                        | Neutral            | Neutral of the Energy Meter              |
 |                        | 5V                 | VSDSquadron Mini & ESP32 VCC              |
 |                        | GND                | VSDSquadron Mini & ESP32 GND              |
-| **Touch Sensor**       | GPIO                 | VSDSquadron Mini GPIO PD2                |
+| **Touch Sensor 1**     | GPIO                | VSDSquadron Mini GPIO PD2                |
+|                        | VCC                 | VSDSquadron Mini 3V                      |
+|                        | GND                | VSDSquadron Mini GND                      |
+| **Touch Sensor 2**     | GPIO                 | VSDSquadron Mini GPIO PD3               |
 |                        | VCC                 | VSDSquadron Mini 3V                      |
 |                        | GND                | VSDSquadron Mini GND                     |
-| **I2C LCD**          | SDA                 | VSDSquadron Mini GPIO (PC1)              |
-|                        | SCL                | VSDSquadron Mini GPIO (PC2)              |
+| **PIR Sensor**         | d0                 | VSDSquadron Mini GPIO (PD5)              |                  
 |                        | VCC                 | VSDSquadron Mini 5V                      |
 |                        | GND                | VSDSquadron Mini GND                     |
-
+|  **LED1**              |SIGNAL              |VSDSquadron Mini PD4                      |
+|                        | GND                | VSDSquadron Mini GND                     |
+|  **LED2**              |SIGNAL              |VSDSquadron Mini PC3                      |
+|                        | GND                | VSDSquadron Mini GND                     |
+|  **LED3**              |SIGNAL              |VSDSquadron Mini PC4                      |
+|                        | GND                | VSDSquadron Mini GND                     |
 
 
 
