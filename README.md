@@ -1,5 +1,5 @@
 # CEHA_IOT_Product-Development
-CEHA = Cost-Efficient IOT Based Home Automation System .
+CEHA = Cost-Efficient IOT Based Home Automation System.
 
 Cost-Efficient IOT Based Home Automation System using VSDSquadron mini 
 ***CEHA-IOT, Powered by the VSDSquadron Mini***
