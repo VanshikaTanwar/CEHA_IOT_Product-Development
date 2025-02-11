@@ -110,14 +110,15 @@ e) This system uses low-cost sensors to track and control the functioning of hom
 
 # BLOCK DIAGRAM OF THE CEHA SYSTEM 
 
+![Copy of Blank diagram](https://github.com/user-attachments/assets/3db11dc7-3e94-4b82-af0e-06d51edc2ca8)
 
-![block diagram CEHA ](https://github.com/user-attachments/assets/d3bf4e26-3a8b-4f0a-b3d7-328fcb476dd8)
 
 
 
 # CIRCUIT DIAGRAM OF CEHA SYSTEM
 
-![circuit diagram of CEHA](https://github.com/user-attachments/assets/339c1629-1405-4375-97f7-8114d61c4cf0)
+![CKT](https://github.com/user-attachments/assets/fb5ac66b-e984-4b5a-bac3-fddc5b9eabf7)
+
 
 # Introduction to Arduino IOT Cloud
 
